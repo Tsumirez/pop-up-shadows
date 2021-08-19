@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+body > div {
+  width: 9rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+div.slide > div {
+  width: 6rem;
+  height: 6rem;
+  transform-origin: center;
+  background: linear-gradient(to right, #ddd, #aaa 40%,#999 50%, black );
+  border: 1px solid black;
+  text-align: center;
+  line-height: 6rem;
+  transform: rotateX(45deg) rotateZ(45deg);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.8), 
+    0 0 0 rgba(0, 0, 0, 0.6),
+    0 0 0 rgba(0, 0, 0, 0.4), 
+    0 0 0 rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+div.slide:hover > div {
+  transform: translateY(-4.4rem) rotateX(45deg) rotateZ(45deg);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.8),
+    1rem 1rem 0 rgba(0, 0, 0, 0.6),
+    2rem 2rem 0 rgba(0, 0, 0, 0.4), 
+    3rem 3rem 0 rgba(0, 0, 0, 0.2);
+}
